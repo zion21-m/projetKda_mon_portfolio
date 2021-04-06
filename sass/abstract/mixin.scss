@@ -1,0 +1,21 @@
+@import './variables.scss';
+
+@mixin applyScore($width-score) {
+    height: 1vh;
+    background-color: $color-blue;
+    width: $width-score;
+}
+
+@mixin padding {
+    padding: 2rem;
+}
+
+@mixin margin {
+    margin-bottom: 3rem !important;
+    margin-top: 1rem !important;
+}
+@mixin flex-responsive {
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
+}

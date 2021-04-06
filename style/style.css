@@ -1,0 +1,217 @@
+@charset "UTF-8";
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.btn {
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #2f80ed;
+  transition: all 0.3s;
+  position: relative;
+  left: 24vw;
+}
+.btn:link, .btn:visited {
+  text-decoration: none;
+  border: 2px solid #2f80ed;
+  color: indigo;
+}
+.btn:hover {
+  background-color: #fff;
+  color: #2f80ed;
+}
+.btn--blue {
+  background-color: #2f80ed;
+  color: white;
+  font-size: 20px;
+}
+.btn--red {
+  background-color: #d92950;
+  color: white;
+}
+
+body {
+  font-size: 62.5%;
+}
+
+h2 {
+  color: #2f80ed;
+  font-size: 2.5rem !important;
+  font-weight: bold;
+}
+
+h3 {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 1.5rem !important;
+}
+
+p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.3rem;
+}
+
+.bold {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+section {
+  padding: 2rem;
+}
+
+header {
+  display: block;
+  position: fixed;
+  width: 100vw;
+  position: -webkit-sticky;
+  z-index: 100;
+  opacity: 0.8;
+}
+
+h2 {
+  margin-bottom: 3rem !important;
+  margin-top: 1rem !important;
+}
+
+.activ {
+  border-bottom: 2px solid white !important;
+}
+
+.espace {
+  background-color: black;
+  height: 11vh;
+}
+
+.homes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 0 5px #000;
+  height: 100vh;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../img/—Pngtree—abstract polygonal space low poly_1177119.png");
+  /* Set a specific height */
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.presentation {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 6rem;
+  text-align: center;
+  color: white;
+}
+
+.profession {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.aboutMe__identification {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 600px) {
+  .aboutMe__identification {
+    flex-direction: column;
+  }
+}
+.aboutMe__skills {
+  width: 80%;
+}
+.aboutMe__total {
+  width: 100%;
+  height: 1vh;
+  background-color: #CCC;
+}
+.aboutMe__scoreHtml {
+  height: 1vh;
+  background-color: #2f80ed;
+  width: 70%;
+}
+.aboutMe__scoreCss {
+  height: 1vh;
+  background-color: #2f80ed;
+  width: 60%;
+}
+.aboutMe__scoreJs {
+  height: 1vh;
+  background-color: #2f80ed;
+  width: 45%;
+}
+.aboutMe__scorePy {
+  height: 1vh;
+  background-color: #2f80ed;
+  width: 45%;
+}
+
+.projets {
+  background-color: #CCC;
+}
+
+.projets h2 {
+  margin-top: 10%;
+}
+
+.projets .card .image {
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.projets .image img {
+  transition: all 0.8s;
+}
+
+.projets .image img:hover {
+  transform: scale(1.5);
+}
+
+.contactMe div {
+  padding: 0.5rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 2px solid #2f80ed;
+}
+
+input:focus, textarea:focus {
+  outline: #2f80ed;
+}
+
+textarea {
+  resize: none;
+}
+
+.coulisse {
+  display: inline-block;
+}
+
+.coulisse::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #2f80ed;
+  transition: width 0.4s;
+}
+
+.coulisse:hover::after {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

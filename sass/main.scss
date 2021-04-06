@@ -1,0 +1,144 @@
+@import './base/reset.scss';
+@import './abstract/variables.scss';
+@import './abstract/mixin.scss';
+@import './components/button.scss';
+@import './base/typography.scss';
+
+
+section {
+    @include padding();
+}
+header {
+    display: block;
+    position: fixed;
+    width: 100vw;
+    position: -webkit-sticky;
+    z-index: 100;
+    opacity: 0.8;
+}
+h2 {
+    @include margin();
+}
+.activ {
+    border-bottom: 2px solid white!important;
+}
+.espace {
+    background-color: rgb(0,0,0);
+    height: 11vh;
+}
+
+.homes {
+    // background-image: linear-gradient(to left, rgba(0,0,0,0.8), rgba(0,0,50,0.5));
+    // position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 5px #000;
+    height: 100vh;
+}
+.parallax {
+        /* The image used */
+        background-image: url('../img/—Pngtree—abstract\ polygonal\ space\ low\ poly_1177119.png');
+      
+        /* Set a specific height */
+        // min-height: 500px;
+      
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+
+.presentation {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 6rem;
+    text-align: center;
+    color: white;
+}
+.profession {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+}
+.aboutMe {
+    &__identification {
+        display: flex;
+        justify-content: space-between;
+        @include flex-responsive();
+    }
+    &__skills {
+        width: 80%;
+    }
+    &__total {
+        width: 100%;
+        height: 1vh;
+        background-color: #CCC;
+        // border: 1px solid #CCC;
+    }
+    &__scoreHtml {
+        @include applyScore(70%);
+        // border: 1px solid #ccc;   
+    }
+    &__scoreCss { 
+        @include applyScore(60%);
+    }
+    &__scoreJs {  
+        @include applyScore(45%);
+
+    }
+    &__scorePy {
+        @include applyScore(45%);  
+    }
+}
+.projets {
+    background-color: #CCC;
+}
+.projets h2 {
+    margin-top: 10%;
+}
+
+.projets .card .image {
+    overflow: hidden;
+    transition: all .5s;
+}
+.projets .image img {
+    transition: all .8s;
+}
+.projets .image img:hover {
+    transform: scale(1.5);
+}
+.contactMe div {
+    padding: 0.5rem;
+    
+}
+input, textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 2px solid $color-blue;
+}
+input:focus, textarea:focus {
+    outline: $color-blue;
+}
+textarea {
+    resize: none;
+}
+.coulisse {
+    display: inline-block;
+}
+
+.coulisse::after {
+    content:'';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: $color-blue;
+    transition: width .4s;
+}
+.coulisse:hover::after {
+    width: 100%;
+}

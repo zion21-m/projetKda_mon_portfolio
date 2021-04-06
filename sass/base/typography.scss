@@ -1,0 +1,23 @@
+@import '../abstract/variables.scss';
+
+body {
+    font-size: 62.5%;
+}
+
+h2 {
+    color: $color-blue;
+    font-size: 2.5rem !important;
+    font-weight: bold;
+}
+h3 {
+    color: rgba($color: #000000, $alpha: 0.8);
+    font-size: 1.5rem !important;
+}
+p {
+    color: rgba($color: #000000, $alpha: 0.6);
+    font-size: 1.3rem;
+}
+.bold {
+    font-weight: bold;
+    color: rgba($color: #000000, $alpha: 0.8);
+}

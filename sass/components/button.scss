@@ -1,0 +1,32 @@
+@import '../abstract/variables.scss';
+
+.btn {
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid $color-blue;
+    transition: all .3s;
+    position: relative;
+    left: 24vw;
+
+    &:link, &:visited {
+        text-decoration: none;
+        border: 2px solid $color-blue;
+        color: $color-indigo;
+    }
+    &:hover{
+        background-color: $color-white;
+        color: $color-blue;
+    }
+    &--blue{
+        background-color: $color-blue;
+        color: white;
+        font-size: 20px;
+    }
+    &--red {
+        background-color: $color-red;
+        color: white;
+    }
+    // &--animated{
+
+    // }
+}
