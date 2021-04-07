@@ -12,7 +12,6 @@ header {
     display: block;
     position: fixed;
     width: 100vw;
-    position: -webkit-sticky;
     z-index: 100;
     opacity: 0.8;
 }
@@ -34,15 +33,14 @@ h2 {
     align-items: center;
     justify-content: center;
     color: white;
-    text-shadow: 0 0 5px #000;
     height: 100vh;
 }
 .parallax {
         /* The image used */
-        background-image: url('../img/—Pngtree—abstract\ polygonal\ space\ low\ poly_1177119.png');
+        background-image: linear-gradient(to left, rgba(4,4,4,0.8) 20%, rgba(4,4,4,0.5) 50%, rgba(4,4,4,0.8) 100%),
+         url('../img/—Pngtree—abstract\ polygonal\ space\ low\ poly_1177119.png');
       
         /* Set a specific height */
-        // min-height: 500px;
       
         /* Create the parallax scrolling effect */
         background-attachment: fixed;
@@ -57,20 +55,38 @@ h2 {
     text-align: center;
     color: white;
 }
+@media (max-width:600px) {
+    .presentation {
+        font-size: 4rem;
+    }
+    .profession {
+        font-size: 1rem;
+    }
+}
 .profession {
     color: white;
     font-size: 3rem;
     text-align: center;
     font-weight: bold;
 }
+
 .aboutMe {
+    background-color: $color-bcg-blue;
+
+    &__picture {
+        width: 40%;
+    }
+
     &__identification {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
+        padding-top: 1rem;
         @include flex-responsive();
     }
+   
     &__skills {
         width: 80%;
+        padding-top: 0.7rem;
     }
     &__total {
         width: 100%;
@@ -94,11 +110,11 @@ h2 {
     }
 }
 .projets {
-    background-color: #CCC;
+    background-color: #f5f5f5;
 }
-.projets h2 {
-    margin-top: 10%;
-}
+// .projets h2 {
+//     margin-top: 10%;
+// }
 
 .projets .card .image {
     overflow: hidden;
@@ -110,10 +126,17 @@ h2 {
 .projets .image img:hover {
     transform: scale(1.5);
 }
-.contactMe div {
-    padding: 0.5rem;
+.contactMe{
+    & div {
+        padding: 0.5rem;
+    }
     
+    &--blue {
+        background-color: $color-bcg-blue;
+    }
 }
+
+
 input, textarea {
     width: 100%;
     padding: 1rem;
@@ -141,4 +164,9 @@ textarea {
 }
 .coulisse:hover::after {
     width: 100%;
+}
+
+.fas {
+    color: $color-blue;
+    font-size: 2rem;
 }

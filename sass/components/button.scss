@@ -5,9 +5,6 @@
     border-radius: 8px;
     border: 1px solid $color-blue;
     transition: all .3s;
-    position: relative;
-    left: 24vw;
-
     &:link, &:visited {
         text-decoration: none;
         border: 2px solid $color-blue;

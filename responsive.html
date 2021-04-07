@@ -21,10 +21,10 @@
                         <a href="#" class="item">Merdie Mulaba</a>
                                 
                         <div class="menu right">
-                            <a class="item activ right home" href="#home"><i class="home icon"></i>Accueil</a>
-                            <a class="item about" href="#about"><i class="user icon"></i>A propos</a>
-                            <a class="item projects" href="#projects"><i class="cogs icon"></i>Projets</a>
-                            <a class="item contact" href="#contact"><i class="address card icon"></i>Contact</a>
+                            <a class="item activ right home navigationMenu" href="#home"><i class="home icon"></i>Accueil</a>
+                            <a class="item about navigationMenu" href="#about"><i class="user icon"></i>A propos</a>
+                            <a class="item projects navigationMenu" href="#projects"><i class="cogs icon"></i>Projets</a>
+                            <a class="item contact navigationMenu" href="#contact"><i class="address card icon"></i>Contact</a>
                         </div>
                     </div>      
                 </div>
@@ -53,7 +53,7 @@
     </div>
     </header>
 
-    <div class="espace"></div>
+     <div class="espace"></div>
 
     <section class="homes parallax" id="home">
         <div class="ui stackable grid">
@@ -74,7 +74,7 @@
         </div>
     </section>
 
-    <div class="ui hidden divider"></div>
+    <!-- <div class="ui hidden divider"></div> -->
 
     <section class="aboutMe" id="about">
         <div class="ui stackable grid centered">
@@ -93,18 +93,32 @@
                                 <img src="img/imagemerdie.jpeg" alt="photo de Merdie">
                             </div>
                             <div class="aboutMe__identity">
-                                <p><span class="bold">Nom</span> : <span class="aboutMe__identity__name"></span> <br>
-                                    <span class="bold">Profile</span> : <span class="aboutMe__identity__profile"></span> <br>
-                                    <span class="bold">Email</span> : <span class="aboutMe__identity__email"></span> <br>
-                                    <span class="bold">Téléphone</span> : <span class="aboutMe__identity__phone"></span>  
-                                </p>
+                                <p><span class="bold">Nom</span> : <span class="aboutMe__identity__name"></span></p>
+                                <p> <span class="bold">Profile</span> : <span class="aboutMe__identity__profile"></span> </p>
+                                <p><span class="bold">Email</span> : <span class="aboutMe__identity__email"></span></p>
+                                <p><span class="bold">Téléphone</span> : <span class="aboutMe__identity__phone"></span> </p>
                             </div>
                         </div>
                         <br>
-                        <div class="aboutMe__skills">
-                            <p class="bold">Compétences</p> <br>
+                        <div class="aboutMe__me">
+                            <div class="ui basic segment">
+                                <h3>Qui est Merdie Mulaba</h3>
+                                <p id="aboutMe__me__biography">
+                                    <!-- Je suis Merdie Mulaba, passionné de l'informatique. J'ai toujous aimé l'informatique
+                                    et tout ce qui est numérique a toujours attiré mon attention. -->
+                                </p>
+                            </div>
                             
-                            <p>HTML
+                            
+                        </div>
+                        
+                    </div>
+        
+                    <div class="column">
+                        <div class="aboutMe__skills">
+                            <h3 class="bold">Compétences</h3> <br>
+                            
+                            <p id="aboutMe__skills_1">
                             <div class="aboutMe__total">
                                 <div class="aboutMe__scoreHtml"></div>
                             </div>
@@ -112,48 +126,32 @@
                             
                             <!-- <br> -->
                             
-                            <P>CSS
+                            <P id="aboutMe__skills_2">
                             <div class="aboutMe__total">
                                 <div class="aboutMe__scoreCss"></div>
                             </div>
-                        </P>
+                            </P>
         
-                            <P>JavaScript
+                            <P id="aboutMe__skills_3">
                             <div class="aboutMe__total">
                                 <div class="aboutMe__scoreJs"></div>
                             </div>
-                        </P>
+                            </P>
         
-                            <P>Python
+                            <P id="aboutMe__skills_4">
                             <div class="aboutMe__total">
                                 <div class="aboutMe__scorePy"></div>
                             </div>
-                        </P>
+                             </P>
                         </div>
-                    </div>
-        
-                    <div class="column">
-                        
-                        <div class="aboutMe__me">
-                            <h3>A propos de moi</h3>
-                            <p>Je suis Merdie Mulaba, passionné de l'informatique. J'ai toujous aimé l'informatique
-                                et tout ce qui est numérique a toujours attiré mon attention.
-                            </p>
-                            <p>
-                                Suite à cela, je me suis lancé dans le développement web pour poursuivre ma passion
-                                mais aussi pour aider tout ceux qui désirent recevoir des services dans le développement web.
-                            </p>
-                        </div>
-                          
+                                                
                     </div>
                 </div>
                     
             </div>
         </div>
-
     </section>
 
-     <div class="ui hidden divider"></div>
 
     <section class="projets" id="projects">
 
@@ -167,13 +165,15 @@
             <div class="ui three column stackable grid">
                 <div class="column">
                   <div class="ui fluid card">
-                    <div class="image">
+                    <div class="image" id="projects__1_image">
                       <img src="./img/projet_kd-formulaire-avec-js.png">
+                      <!-- ./img/projet_kd-formulaire-avec-js.png -->
                     </div>
                     <div class="content">
-                      <a class="header">Formulaire avec Js</a>
+                      <a class="header" id="projects__1_title">Formulaire avec Js</a>
                       <div class="description">
-                          <p>Le travail consiste à réaliser un formulaire qui ajoute dynamiquement
+                          <p id="projects__1_description">
+                              Le travail consiste à réaliser un formulaire qui ajoute dynamiquement
                               les utilisateurs à l'aide de JavaScript.
                           </p>
                       </div>
@@ -182,13 +182,14 @@
                 </div>
                 <div class="column">
                   <div class="ui fluid card">
-                    <div class="image">
+                    <div class="image" id="projects__2_image">
                       <img src="./img/projet_site-kd.png">
+                      <!-- ./img/projet_site-kd.png -->
                     </div>
                     <div class="content">
-                      <a class="header" href="https://merdie-projet-fin-prarie.netlify.app/">Site de Kinshasa Digital</a>
+                      <a class="header" id="projects__2_title" href="https://merdie-projet-fin-prarie.netlify.app/">Site de Kinshasa Digital</a>
                       <div class="description">
-                          <p>
+                          <p id="projects__2_description">
                               Réaliser le site internet de la Kinshasa Digital pour leur permettre de
                               rester en contact avec leurs clients afin d'optimiser leurs services.
                           </p>
@@ -198,13 +199,14 @@
                 </div>
                 <div class="column">
                   <div class="ui fluid card">
-                    <div class="image">
+                    <div class="image" id="projects__3_image">
                       <img src="./img/projet_kd-formulaire.png">
+                      <!-- ./img/projet_kd-formulaire.png -->
                     </div>
                     <div class="content">
-                      <a class="header" href="https://zion21-m.github.io/Projet_4_formulaire/">Formulaire de contact</a>
+                      <a class="header" id="projects__3_title" href="https://zion21-m.github.io/Projet_4_formulaire/">Formulaire de contact</a>
                       <div class="description">
-                        <p>
+                        <p id="projects__3_description">
                             Réaliser un formulaire sur la base d'une maquette présentée par le client.
                         </p>
                     </div>
@@ -214,7 +216,7 @@
 
                 <div class="column">
                     <div class="ui fluid card">
-                      <div class="image">
+                      <div class="image" id="projects__4">
                         <img src="./img/projet_kd-formulaire-avec-js.png">
                       </div>
                       <div class="content">
@@ -230,7 +232,7 @@
 
                   <div class="column">
                     <div class="ui fluid card">
-                      <div class="image">
+                      <div class="image" id="projects__5">
                         <img src="./img/projet_site-kd.png">
                       </div>
                       <div class="content">
@@ -247,7 +249,7 @@
 
                   <div class="column">
                     <div class="ui fluid card">
-                      <div class="image">
+                      <div class="image" id="projects__6">
                         <img src="./img/projet_kd-formulaire.png">
                       </div>
                       <div class="content">
@@ -267,9 +269,8 @@
 
     </section>
 
-    <div class="ui hidden divider"></div>
 
-    <section id="contact">
+    <section id="contact" class="contactMe--blue">
             <div class="ui stackable grid centered">
                 <div class="ui basic segment">
                     <h2>RESTONS EN CONTACT</h2>
@@ -309,20 +310,19 @@
             
                         <div class="column">
                             <div class="ui basic segment">
-                                <h3>Restons en contact</h3>
+                                <h3>Pour plus d'informations</h3>
                             </div>
-                            <!-- <div class="ui basic segment"> -->
+                            <div class="ui basic segment"> 
                                 <p>
-                                    Si vous voulez plus d'informations ou plus de détails, nous pouvons garder contact.
-                                    Voici ci-bas, mon adresse, mon contact et les liens de tous mes médias sociaux.
+                                    Pour plus de détails, gardons contact ! &#x1f60a;
+                                </p>
+                                <p>
                                     <span>Hâte de vous parler</span>
                                 </p>
-                                <p><i class="fas fa-map-marker-alt"></i>
-                                    <b>N° 63</b>  Avenue Colonel Mondjiba,
-                                    Commune de Ngaliema - Kinshasa,
-                                    <strong>Kinshasa Digital</strong> --
-                                    Texaf Digital Campus,
-                                    Concession COTEX (<b>référence</b>: en face de l’Ambassade de France) ---<br> 
+                                <p><i class="fas fa-map-marker-alt"></i> &nbsp;
+                                    <b> N° 63</b>  Avenue Colonel Mondjiba,
+                                    Commune de Ngaliema
+                                    <br> 
 
                                     <i class="large congo flag"></i> République Démocratique du Congo 
                                 </p>
@@ -334,7 +334,7 @@
                                     <a href="https://github.com/zion21-m" class="coulisse"><i class="large github icon"></i></a>
                                     <a href="https://www.linkedin.com/in/merdie-mulaba-31aa5616b/" class="coulisse"><i class="large linkedin icon"></i></a>
                                 </p>
-                            <!-- </div> -->
+                            </div>
                             
                         </div>
                     </div>

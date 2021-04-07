@@ -1,0 +1,29 @@
+{
+    "identite": [
+        {"prenom": "Merdie", "nom": "Mulaba", "profile": "Développeur frontend", "email":"merdiemlb@gmail.com", 
+        "telephone": 243814243742, 
+        "biographie": "Merdie Mulaba est un passionné de l'informatique. J'ai toujours aimé l'informatique et tout ce qui est numérique a toujours attiré mon attention."
+    }
+    ],
+    "competences": [
+        {"html" : "HTML", "pourcentageHtml" : 70, 
+        "css": "CSS", "pourcentageCss" : 60,
+        "javascript": "Javascript", "pourcentageJavascript" : 45,
+        "python": "Python", "pourcentagePython" : 45}
+    ],
+
+    "Projets": [
+        {"image":"./img/projet_kd-formulaire-avec-js.png", 
+        "titreProjet": "Formulaire avec Js",
+        "descriptionProjet": "Le travail consiste à réaliser un formulaire qui ajoute dynamiquement les utilisateurs à l'aide de JavaScript."
+        },
+        { "image": "./img/projet_site-kd.png",
+        "titreProjet": "Site de Kinshasa Digital",
+        "descriptionProjet":"Réaliser le site internet de la Kinshasa Digital pour leur permettre de rester en contact avec leurs clients afin d'optimiser leurs services."
+        },
+        { "image": "./img/projet_kd-formulaire.png",
+            "titreProjet": "Formulaire de contact",
+            "descriptionProjet": "Réaliser un formulaire sur la base d'une maquette présentée par le client."
+            }
+      ]
+}

@@ -7,7 +7,9 @@
 }
 
 @mixin padding {
-    padding: 2rem;
+    padding: 2rem !important;
+    padding-top: 4rem !important;
+    padding-bottom: 10rem !important;
 }
 
 @mixin margin {
@@ -15,7 +17,7 @@
     margin-top: 1rem !important;
 }
 @mixin flex-responsive {
-    @media (max-width: 600px) {
+    @media (max-width: 1200px) {
         flex-direction: column;
     }
 }

@@ -1,9 +1,0 @@
-{
-    "identite": [
-        {"prenom": "Merdie", "nom": "Mulaba", "profile": "Développeur frontend", "email":"merdiemlb@gmail.com", 
-        "telephone": 243814243742 }
-    ],
-    "competences": [
-        "html", "css", "javascript", "python"
-    ]
-}

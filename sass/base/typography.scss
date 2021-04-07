@@ -1,17 +1,23 @@
 @import '../abstract/variables.scss';
 
+@font-face {
+    font-family: 'AirFactoryRounded';
+    src: url('../../Fonts/AirFactoryRounded/Air\ Factory\ Rounded\ Bold.ttf');
+}
+
 body {
     font-size: 62.5%;
 }
 
 h2 {
-    color: $color-blue;
-    font-size: 2.5rem !important;
-    font-weight: bold;
+    font-family: $font-title-secondary;
+    color: $color-black;
+    font-size: 3rem !important;
+    font-weight: 900;
 }
 h3 {
-    color: rgba($color: #000000, $alpha: 0.8);
-    font-size: 1.5rem !important;
+    color: rgba($color: #000000, $alpha: 0.9);
+    font-size: 2rem !important;
 }
 p {
     color: rgba($color: #000000, $alpha: 0.6);
@@ -20,4 +26,8 @@ p {
 .bold {
     font-weight: bold;
     color: rgba($color: #000000, $alpha: 0.8);
+}
+.navigationMenu {
+    font-weight: bold !important;
+    font-size: 1.2rem;
 }
