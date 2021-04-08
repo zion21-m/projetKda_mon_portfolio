@@ -47,7 +47,7 @@ h2 {
 
 h3 {
   color: rgba(0, 0, 0, 0.9);
-  font-size: 2rem !important;
+  font-size: 1.5rem !important;
 }
 
 p {
@@ -241,6 +241,15 @@ textarea {
 .fas {
   color: #2f80ed;
   font-size: 2rem;
+}
+
+label {
+  display: block;
+}
+
+progress {
+  width: 100%;
+  height: 2vh;
 }
 
 /*# sourceMappingURL=style.css.map */

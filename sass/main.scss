@@ -170,3 +170,11 @@ textarea {
     color: $color-blue;
     font-size: 2rem;
 }
+
+label {
+    display: block;
+}
+progress {
+    width: 100%;
+    height: 2vh;
+}

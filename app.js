@@ -1,6 +1,5 @@
 const sections = document.querySelectorAll('section');
 const navList = document.querySelectorAll('header .menu a');
-console.log(navList)
 
 window.addEventListener('scroll', ()=>{
     let current = '';
@@ -20,30 +19,43 @@ window.addEventListener('scroll', ()=>{
     })
 })
 
+
 // animation page accueil sur les métiers
 
-let profession = document.getElementById('homes__profession');
-const myProfessions = ['Développeur frontend ','UI Designer','UX Designer'];
+    let profession = document.getElementById('homes__profession');
+    let myProfessions = [];
 
-let index1 = 0;
-let index2 = 0;
 
-window.setInterval(()=> {
-    if(index2 == myProfessions[index1].length) {
-        index2 = 0;
-        index1++;
-        
-        profession.textContent = '';
-        // profession = document.createTextNode(`${''}`);
+fetch("http://localhost:3000/professions").then (function(response) {
+    return response.json();    
+})
+.then(function (professions){
+    
+    for (let professio of professions) {
+        myProfessions.push(professio.name);
+        console.log(professio)
     }
-    if(index1 == myProfessions.length) {
-        index1 = 0;
-    }
-    // profession.innerHTML += `${MyProfessions[index1][index2]}`
-    profession.appendChild(document.createTextNode(`${myProfessions[index1][index2]}`))
+    
+    let index1 = 0;
+    let index2 = 0;
 
-    index2++;
-}, 200);
+    window.setInterval(()=> {
+        if(index2 == myProfessions[index1].length) {
+            index2 = 0;
+            index1++;
+            
+            profession.textContent = '';
+            // profession = document.createTextNode(`${''}`);
+        }
+        if(index1 == myProfessions.length) {
+            index1 = 0;
+        }
+        // profession.innerHTML += `${MyProfessions[index1][index2]}`
+        profession.appendChild(document.createTextNode(`${myProfessions[index1][index2]}`))
+    
+        index2++;
+    }, 200);
+})
 
 // récupération des éléments dans la base des données
 
@@ -55,97 +67,178 @@ window.onload = function () {
     const aboutMe__identity__phone = document.querySelector(".aboutMe__identity__phone");
     const aboutMe__me__biography = document.querySelector("#aboutMe__me__biography");
 
+    let contactMe__tel = document.querySelector('#contactMe__tel');
+    let contactMe__mail = document.querySelector('#contactMe__mail');
+
+    let contactMe__pays = document.querySelector('#contactMe__pays');
+    let contacMe__address = document.querySelector('#contactMe__address')
+
     // dans le premier élément de la ressource. identité
 
+    // fetch("https://my-json-server.typicode.com/zion21-m/projetKda_mon_portfolio/identite").then(function(response){
+    //     return response.json();
+    // })
     fetch("http://localhost:3000/identite").then(function(response){
         return response.json();
     })
-    .then(function (data) {
-        for (let i of data) {
-            let name = document.createTextNode(`${i.prenom} ${i.nom}`);
-            let names = document.createTextNode(`${i.prenom} ${i.nom}`);
-            let profile = document.createTextNode(`${i.profile}`);
-            let email = document.createTextNode(`${i.email}`);
-            let phone = document.createTextNode(`${i.telephone}`);
-            let biography = document.createTextNode(`${i.biographie}`);
-           
+    .then(function (identites) {
+        for (let identite of identites) {
+            let name = document.createTextNode(`${identite.prenom} ${identite.nom}`);
+            let names = document.createTextNode(`${identite.prenom} ${identite.nom}`);
+            let profile = document.createTextNode(`${identite.profile}`);
+            let email = document.createTextNode(`${identite.email}`);
+            let phone = document.createTextNode(`${identite.telephone}`);
+            let biography = document.createTextNode(`${identite.biographie}`);
+
+
             homes__name.appendChild(names);
             aboutMe__identity__name.appendChild(name);
             aboutMe__identity__profile.appendChild(profile);
             aboutMe__identity__email.appendChild(email);
             aboutMe__identity__phone.appendChild(phone);
             aboutMe__me__biography.appendChild(biography);
+
+            let contactPhone = document.createElement('a');
+            contactPhone.classList.add('coulisse');
+            contactPhone.setAttribute('href', identite.hreftel);
+
+            let contactPhoneLogo = document.createElement('i');
+            contactPhoneLogo.classList.add('large','phone','square', 'icon' );
+
+            contactPhoneText = document.createElement('span');  
+            
+            contactPhoneText.textContent = `${identite.telephone}`;
+
+            contactMe__tel.appendChild(contactPhone);
+            contactPhone.appendChild(contactPhoneLogo);
+            contactPhone.appendChild(contactPhoneText);
+        
+    
+            let contactMail = document.createElement('a');
+            contactMail.classList.add('coulisse');
+            contactMail.setAttribute('href', identite.mailto);
+
+            let contactMailLogo = document.createElement('i');
+            contactMailLogo.classList.add('large', 'envelope', 'icon');
+
+            contactMe__mail.appendChild(contactMail);
+            contactMail.appendChild(contactMailLogo);
+            
+            let contactMailText = document.createElement('span');
+            contactMail.appendChild(contactMailText);
+            contactMailText.textContent = `${identite.email}`;
+
+            let contactMe__paysLogo = document.createElement('i');
+            contactMe__paysLogo.classList.add('huge','congo', 'flag');
+            contactMe__pays.appendChild(contactMe__paysLogo);
+
+            let contactMe__paysText = document.createElement('span');
+            contactMe__paysText.textContent = `${identite.pays}`;
+            contactMe__pays.appendChild(contactMe__paysText);
+
+            let contactMe__addressLogo = document.createElement('i');
+            contactMe__addressLogo.classList.add('fas', 'fa-map-marker-alt');
+            contactMe__address.appendChild(contactMe__addressLogo);
+
+            let contactMe__addressText = document.createElement('span');
+            contactMe__addressText.textContent = `  ${identite.adresse}`;
+            contactMe__address.appendChild(contactMe__addressText);
+           
+
         }
     })
 
-    const aboutMe__skills_1 = document.querySelector('#aboutMe__skills_1');
-    const aboutMe__skills_2 = document.querySelector('#aboutMe__skills_2');
-    const aboutMe__skills_3 = document.querySelector('#aboutMe__skills_3');
-    const aboutMe__skills_4 = document.querySelector('#aboutMe__skills_4');
 
     // dans le deuxième élément compétence
-    fetch("http://localhost:3000/competences").then(function(response){
+    // fetch("https://my-json-server.typicode.com/zion21-m/projetKda_mon_portfolio/competences").then(function(response){
+    //     return response.json();
+    // })
+
+    let listeCompetences = document.querySelector("#aboutMe__skills");
+
+    fetch("http://localhost:3000/competences").then(function(response) {
         return response.json();
     })
-    .then(function(data) {
-        for (let i of data) {
-            let skills1 = document.createTextNode(`${i.html} ${i.pourcentageHtml}`);
-            let skills2 = document.createTextNode(`${i.css} ${i.pourcentageCss}`);
-            let skills3 = document.createTextNode(`${i.javascript} ${i.pourcentageJavascript}`);
-            let skills4 = document.createTextNode(`${i.python} ${i.pourcentagePython}`);
+    .then(function(competences) {
+        for (let competence of competences) {
+            
+            let aboutMe__skills1 = document.createElement('div');
+            let aboutMe__skillsLabel = document.createElement('label');
+            let aboutMe__skillsProgress = document.createElement('progress');
+            aboutMe__skillsLabel.textContent = `${competence.nomCompetence}`;
+            aboutMe__skillsProgress.setAttribute('value', competence.pourcentageCompétence);
+            aboutMe__skillsProgress.setAttribute('max', 100);
 
-            aboutMe__skills_1.appendChild(skills1);
-            aboutMe__skills_2.appendChild(skills2);
-            aboutMe__skills_3.appendChild(skills3);
-            aboutMe__skills_4.appendChild(skills4);
+            listeCompetences.appendChild(aboutMe__skills1);
+            aboutMe__skills1.appendChild(aboutMe__skillsLabel);
+            aboutMe__skills1.appendChild(aboutMe__skillsProgress);
+
+
         }
     })
 
-    // const projects__1_image = document.querySelector('#projects__1_image img');
-    // const projects__1_title = document.querySelector('#projects__1_title');
-    // const projects__1_description = document.querySelector('#projects__1_description');
+    let listProjects = document.querySelector('#projects__made')
 
-    // const projects__2_image = document.querySelector('#projects__2_image img');
-    // const projects__2_title = document.querySelector('#projects__2_title');
-    // const projects__2_description = document.querySelector('#projects__2_description');
+    fetch("http://localhost:3000/Projets").then(function(response) {
+        return response.json();
+    })
+    .then(function(projets) {
+        for (let projet of projets) {
+            let column = document.createElement('div');
+            column.classList.add('column');
 
-    // const projects__3_image = document.querySelector('#projects__3_image img');
-    // const projects__3_title = document.querySelector('#projects__3_title');
-    // const projects__3_description = document.querySelector('#projects__3_description');
+            let card = document.createElement('div');
+            card.classList.add('ui', 'fluid', 'card');
 
-    // fetch("http://localhost:3000/Projets").then(function(response){
-    //     return response.json();
-    // })
-    // .then(function(data) {
-    //     for (let i = 0; i<= data.length; i++) {
-    //         if (i=0) {
-    //             let projects1__image = document.createTextNode(`${data[i].image}`);
-    //             let projects1__title = document.createTextNode(` ${data[i].titreProjet}`);
-    //             let projects1__description = document.createTextNode(`${data[i].descriptionProjet}`);
+            let image = document.createElement('div');
+            image.classList.add('image');
 
-    //             projects__1_image.appendChild(projects1__image);
-    //             projects__1_title.appendChild(projects1__title);
-    //             projects__1_description.appendChild(projects1__description);
-    //         }
-    //         if (i=1) {
-    //             let projects2__image = document.createTextNode(`${data[i].image}`)
-    //             let projects2__titre = document.createTextNode(` ${data[i].titreProjet}`)
-    //             let projects2__description = document.createTextNode(`${data[i].descriptionProjet}`)
+            let img = document.createElement('img');
+            img.setAttribute('src', projet.src);
+            img.setAttribute('alt', projet.alt);
 
-    //             projects__2_image.appendChild(projects__1_image);
-    //             projects__2_title.appendChild(projects__1_title);
-    //             projects__2_description.appendChild(projects__1_title);
-    //         }
-    //         if (i=2) {
-    //             let projects3__image = document.createTextNode(`${data[i].image}`)
-    //             let projects3__titre = document.createTextNode(` ${data[i].titreProjet}`)
-    //             let projects3__description = document.createTextNode(`${data[i].descriptionProjet}`)
+            let content = document.createElement('div');
+            content.classList.add('content');
 
-    //             projects__3_image.appendChild(projects__1_image);
-    //             projects__3_title.appendChild(projects__1_title);
-    //             projects__3_description.appendChild(projects__1_title);
-    //         }
-    //     }
-    // })
+            let header = document.createElement('a');
+            header.classList.add('header');
+            header.textContent = `${projet.titreProjet}`;
+            header.setAttribute('href', projet.href);
+
+            let description = document.createElement('div');
+            description.classList.add('description');
+
+            let paragraph = document.createElement('p');
+            paragraph.textContent = `${projet.descriptionProjet}`
+
+            listProjects.appendChild(column);
+            column.appendChild(card);
+            card.appendChild(image);
+            card.appendChild(content);
+            image.appendChild(img);
+            content.appendChild(header);
+            content.appendChild(description);
+            description.appendChild(paragraph);
+        }
+    })
+
+    let listeLiensSociaux = document.querySelector('#liensSociaux');  
+
+    fetch("http://localhost:3000/liensSociaux").then(function(response) {
+        return response.json();
+    })
+    .then(function(liensSociaux) {
+        for (let lienSocial of liensSociaux) {
+            let lien = document.createElement('a');
+            lien.classList.add('coulisse');
+            lien.setAttribute('href', lienSocial.href);
+
+            let logoLien = document.createElement('i');
+            logoLien.classList.add(lienSocial.nom, 'icon', 'large');
+
+            listeLiensSociaux.appendChild(lien);
+            lien.appendChild(logoLien);
+        }
+    })
 }
 
