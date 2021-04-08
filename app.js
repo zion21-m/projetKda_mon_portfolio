@@ -26,7 +26,7 @@ window.addEventListener('scroll', ()=>{
     let myProfessions = [];
 
 
-fetch("http://localhost:3000/professions").then (function(response) {
+fetch("https://my-json-server.typicode.com/zion21-m/projetKda_mon_portfolio/professions").then (function(response) {
     return response.json();    
 })
 .then(function (professions){
@@ -75,12 +75,12 @@ window.onload = function () {
 
     // dans le premier élément de la ressource. identité
 
-    // fetch("https://my-json-server.typicode.com/zion21-m/projetKda_mon_portfolio/identite").then(function(response){
-    //     return response.json();
-    // })
-    fetch("http://localhost:3000/identite").then(function(response){
+    fetch("https://my-json-server.typicode.com/zion21-m/projetKda_mon_portfolio/identite").then(function(response){
         return response.json();
     })
+    // fetch("http://localhost:3000/identite").then(function(response){
+    //     return response.json();
+    // })
     .then(function (identites) {
         for (let identite of identites) {
             let name = document.createTextNode(`${identite.prenom} ${identite.nom}`);
@@ -156,7 +156,7 @@ window.onload = function () {
 
     let listeCompetences = document.querySelector("#aboutMe__skills");
 
-    fetch("http://localhost:3000/competences").then(function(response) {
+    fetch("https://my-json-server.typicode.com/zion21-m/projetKda_mon_portfolio/competences").then(function(response) {
         return response.json();
     })
     .then(function(competences) {
@@ -179,7 +179,7 @@ window.onload = function () {
 
     let listProjects = document.querySelector('#projects__made')
 
-    fetch("http://localhost:3000/Projets").then(function(response) {
+    fetch("https://my-json-server.typicode.com/zion21-m/projetKda_mon_portfolio/Projets").then(function(response) {
         return response.json();
     })
     .then(function(projets) {
@@ -224,7 +224,7 @@ window.onload = function () {
 
     let listeLiensSociaux = document.querySelector('#liensSociaux');  
 
-    fetch("http://localhost:3000/liensSociaux").then(function(response) {
+    fetch("https://my-json-server.typicode.com/zion21-m/projetKda_mon_portfolio/liensSociaux").then(function(response) {
         return response.json();
     })
     .then(function(liensSociaux) {
