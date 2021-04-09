@@ -1,6 +1,7 @@
 {
     "identite": [
-        {"prenom": "Merdie", "nom": "Mulaba", "profile": "Développeur frontend", 
+        {"prenom": "Merdie", "nom": "Mulaba", "profile": "Développeur frontend",
+         "image" : "img/merdie_picture.jpe",
         "email":"merdiemlb@gmail.com", "mailto": "mailto:merdiemlb@gmail.com",
         "telephone": 243814243742,  "hreftel": "tel:+243814243742",
         "adresse" :"N° 63 Avenue Colonel Mondjiba, Commune de Ngaliema",

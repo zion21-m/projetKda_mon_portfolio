@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -76,7 +75,6 @@ header {
   position: fixed;
   width: 100vw;
   z-index: 100;
-  opacity: 0.8;
 }
 
 h2 {
@@ -103,8 +101,7 @@ h2 {
 
 .parallax {
   /* The image used */
-  background-image: linear-gradient(to left, rgba(4, 4, 4, 0.8) 20%, rgba(4, 4, 4, 0.5) 50%, rgba(4, 4, 4, 0.8) 100%), url("../img/—Pngtree—abstract polygonal space low poly_1177119.png");
-  /* Set a specific height */
+  background-image: linear-gradient(to left, rgba(4, 4, 4, 0.8) 20%, rgba(4, 4, 4, 0.5) 50%, rgba(4, 4, 4, 0.8) 100%), url("../img/bcg_portfolio.jpg");
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -119,15 +116,6 @@ h2 {
   color: white;
 }
 
-@media (max-width: 600px) {
-  .presentation {
-    font-size: 4rem;
-  }
-
-  .profession {
-    font-size: 1rem;
-  }
-}
 .profession {
   color: white;
   font-size: 3rem;
@@ -135,11 +123,26 @@ h2 {
   font-weight: bold;
 }
 
+@media (max-width: 700px) {
+  .presentation {
+    font-size: 4rem;
+  }
+
+  .profession {
+    font-size: 2rem;
+  }
+}
 .aboutMe {
-  background-color: #4c9bf1;
+  background-color: #495057;
 }
 .aboutMe__picture {
   width: 40%;
+}
+.aboutMe__picture img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border: 2px solid #adb5bd;
 }
 .aboutMe__identification {
   display: flex;
@@ -155,46 +158,28 @@ h2 {
   width: 80%;
   padding-top: 0.7rem;
 }
-.aboutMe__total {
-  width: 100%;
-  height: 1vh;
-  background-color: #CCC;
+.aboutMe--bcg {
+  background-color: #e9ecef;
 }
-.aboutMe__scoreHtml {
-  height: 1vh;
-  background-color: #2f80ed;
-  width: 70%;
+.aboutMe--alignText {
+  text-align: justify;
 }
-.aboutMe__scoreCss {
-  height: 1vh;
-  background-color: #2f80ed;
-  width: 60%;
-}
-.aboutMe__scoreJs {
-  height: 1vh;
-  background-color: #2f80ed;
-  width: 45%;
-}
-.aboutMe__scorePy {
-  height: 1vh;
-  background-color: #2f80ed;
-  width: 45%;
+.aboutMe__skills--presentation {
+  margin-bottom: 1rem;
 }
 
 .projets {
-  background-color: #f5f5f5;
+  background-color: #6c757d;
 }
 
 .projets .card .image {
   overflow: hidden;
   transition: all 0.5s;
 }
-
 .projets .image img {
   transition: all 0.8s;
 }
-
-.projets .image img:hover {
+.projets .card:hover .image img {
   transform: scale(1.5);
 }
 
@@ -202,7 +187,7 @@ h2 {
   padding: 0.5rem;
 }
 .contactMe--blue {
-  background-color: #4c9bf1;
+  background-color: #adb5bd;
 }
 
 input, textarea {
@@ -245,6 +230,7 @@ textarea {
 
 label {
   display: block;
+  font-weight: bold;
 }
 
 progress {

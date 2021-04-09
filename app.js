@@ -33,7 +33,6 @@ fetch("https://my-json-server.typicode.com/zion21-m/projetKda_mon_portfolio/prof
     
     for (let professio of professions) {
         myProfessions.push(professio.name);
-        console.log(professio)
     }
     
     let index1 = 0;
@@ -45,7 +44,7 @@ fetch("https://my-json-server.typicode.com/zion21-m/projetKda_mon_portfolio/prof
             index1++;
             
             profession.textContent = '';
-            // profession = document.createTextNode(`${''}`);
+        
         }
         if(index1 == myProfessions.length) {
             index1 = 0;
@@ -66,12 +65,13 @@ window.onload = function () {
     const aboutMe__identity__email = document.querySelector(".aboutMe__identity__email");
     const aboutMe__identity__phone = document.querySelector(".aboutMe__identity__phone");
     const aboutMe__me__biography = document.querySelector("#aboutMe__me__biography");
+    const aboutMe__picture = document.querySelector(".aboutMe__picture img");
 
     let contactMe__tel = document.querySelector('#contactMe__tel');
     let contactMe__mail = document.querySelector('#contactMe__mail');
 
     let contactMe__pays = document.querySelector('#contactMe__pays');
-    let contacMe__address = document.querySelector('#contactMe__address')
+    let contacMe__address = document.querySelector('#contactMe__address');
 
     // dans le premier élément de la ressource. identité
 
@@ -89,6 +89,8 @@ window.onload = function () {
             let email = document.createTextNode(`${identite.email}`);
             let phone = document.createTextNode(`${identite.telephone}`);
             let biography = document.createTextNode(`${identite.biographie}`);
+            
+            aboutMe__picture.setAttribute("src", identite.image);
 
 
             homes__name.appendChild(names);
@@ -165,6 +167,7 @@ window.onload = function () {
             let aboutMe__skills1 = document.createElement('div');
             let aboutMe__skillsLabel = document.createElement('label');
             let aboutMe__skillsProgress = document.createElement('progress');
+            aboutMe__skillsProgress.classList.add('aboutMe__skills--presentation');
             aboutMe__skillsLabel.textContent = `${competence.nomCompetence}`;
             aboutMe__skillsProgress.setAttribute('value', competence.pourcentageCompétence);
             aboutMe__skillsProgress.setAttribute('max', 100);
