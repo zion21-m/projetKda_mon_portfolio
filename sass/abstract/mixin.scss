@@ -19,5 +19,14 @@
 @mixin flex-responsive {
     @media (max-width: 1200px) {
         flex-direction: column;
+        justify-content: center;
+       
+
+        .aboutMe__picture img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 2px solid #adb5bd;
+        }
     }
 }

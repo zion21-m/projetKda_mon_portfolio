@@ -77,6 +77,17 @@ header {
   z-index: 100;
 }
 
+.mobile__menu {
+  background-color: #6c757d !important;
+  width: 30vw;
+  color: white !important;
+}
+
+.mobile__menu > a {
+  font-weight: bold !important;
+  color: white !important;
+}
+
 h2 {
   margin-bottom: 3rem !important;
   margin-top: 1rem !important;
@@ -152,6 +163,13 @@ h2 {
 @media (max-width: 1200px) {
   .aboutMe__identification {
     flex-direction: column;
+    justify-content: center;
+  }
+  .aboutMe__identification .aboutMe__picture img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid #adb5bd;
   }
 }
 .aboutMe__skills {
@@ -165,7 +183,7 @@ h2 {
   text-align: justify;
 }
 .aboutMe__skills--presentation {
-  margin-bottom: 1rem;
+  margin-top: 0.6rem;
 }
 
 .projets {
@@ -231,11 +249,54 @@ textarea {
 label {
   display: block;
   font-weight: bold;
+  margin-top: 1rem;
 }
 
 progress {
   width: 100%;
-  height: 2vh;
+  height: 1vh;
+}
+
+.progress__bar--settings {
+  background-color: #ced4da;
+}
+
+.progress__bar--settings::-webkit-progress-bar {
+  background-color: #ced4da;
+}
+
+.progress__bar--settings::-webkit-progress-value {
+  background-color: #495057;
+}
+
+.progress__bar--settings::-moz-progress-bar {
+  background-color: #ced4da;
+}
+
+.mid--underlign, .start-underlign {
+  display: inline-block;
+  position: relative;
+}
+
+.mid--underlign:after {
+  content: "";
+  height: 3px;
+  width: 50%;
+  background-color: #212529;
+  position: absolute;
+  bottom: -0.4em;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.start-underlign:after {
+  content: "";
+  height: 3px;
+  width: 50%;
+  background-color: #495057;
+  position: absolute;
+  bottom: -0.4em;
+  left: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

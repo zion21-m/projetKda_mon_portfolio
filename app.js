@@ -167,6 +167,7 @@ window.onload = function () {
             let aboutMe__skills1 = document.createElement('div');
             let aboutMe__skillsLabel = document.createElement('label');
             let aboutMe__skillsProgress = document.createElement('progress');
+            aboutMe__skillsProgress.classList.add('progress__bar--settings'); 
             aboutMe__skillsProgress.classList.add('aboutMe__skills--presentation');
             aboutMe__skillsLabel.textContent = `${competence.nomCompetence}`;
             aboutMe__skillsProgress.setAttribute('value', competence.pourcentageCompétence);
