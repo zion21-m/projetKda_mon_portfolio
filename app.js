@@ -150,7 +150,6 @@ window.onload = function () {
         }
     })
 
-
     // dans le deuxième élément compétence
     // fetch("https://my-json-server.typicode.com/zion21-m/projetKda_mon_portfolio/competences").then(function(response){
     //     return response.json();

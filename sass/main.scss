@@ -15,6 +15,12 @@ header {
     z-index: 100;
     // opacity: 0.8;
 }
+.menu--blue{
+    background-color: #212529 !important;
+}
+.menu--color {
+    background-color: #212529 !important;
+}
 .mobile__menu {
     background-color: #6c757d !important;
     width: 30vw;
@@ -46,7 +52,6 @@ h2 {
         /* The image used */
         background-image: linear-gradient(to left, rgba(4,4,4,0.8) 20%, rgba(4,4,4,0.5) 50%, rgba(4,4,4,0.8) 100%),
          url('../img/bcg_portfolio.jpg');
-      
       
         /* Create the parallax scrolling effect */
         background-attachment: fixed;
@@ -126,7 +131,6 @@ h2 {
             transform: scale(1.5);
         }
     }
-    
 }
 
 .contactMe{
@@ -134,7 +138,7 @@ h2 {
         padding: 0.5rem;
     }
     
-    &--blue {
+    &--gray {
         background-color: #adb5bd;
     }
 }
@@ -184,8 +188,6 @@ progress {
 }
 .progress__bar--settings{
     background-color: #ced4da ;
-    // height: 0.6rem;
-    // width: 100%;
 }
 .progress__bar--settings::-webkit-progress-bar {
     background-color : #ced4da ;
@@ -203,14 +205,14 @@ progress {
 }
     
 .mid--underlign:after {
-content: "";
-height: 3px;
-width: 50%;
-background-color: #212529;
-position: absolute;
-bottom: -.4em;
-left: 50%;
-transform: translate(-50%);
+    content: "";
+    height: 3px;
+    width: 50%;
+    background-color: #212529;
+    position: absolute;
+    bottom: -.4em;
+    left: 50%;
+    transform: translate(-50%);
 }
 .start-underlign:after {
     content: "";

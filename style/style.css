@@ -77,6 +77,14 @@ header {
   z-index: 100;
 }
 
+.menu--blue {
+  background-color: #212529 !important;
+}
+
+.menu--color {
+  background-color: #212529 !important;
+}
+
 .mobile__menu {
   background-color: #6c757d !important;
   width: 30vw;
@@ -204,7 +212,7 @@ h2 {
 .contactMe div {
   padding: 0.5rem;
 }
-.contactMe--blue {
+.contactMe--gray {
   background-color: #adb5bd;
 }
 
