@@ -3,7 +3,7 @@
 .btn {
   padding: 1rem;
   border-radius: 8px;
-  border: 1px solid $color-blue;
+  border: 1px solid $color-blueSecondary;
   transition: all 0.3s;
   &:link,
   &:visited {
@@ -13,10 +13,10 @@
   }
   &:hover {
     background-color: $color-white;
-    color: $color-blue;
+    color: $color-blueSecondary;
   }
   &--blue {
-    background-color: $color-blue;
+    background-color: $color-blueSecondary;
     color: $color-white;
     font-size: 20px;
   }

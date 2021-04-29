@@ -171,7 +171,7 @@ h2 {
     background-color: #adb5bd;
   }
   &--blue {
-    color: $color-blue;
+    color: $color-blueSecondary;
   }
 }
 
@@ -181,7 +181,7 @@ textarea {
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 5px;
-  border: 2px solid $color-blue;
+  border: 2px solid $color-blueSecondary;
 }
 input:focus,
 textarea:focus {
@@ -192,11 +192,11 @@ textarea {
 }
 
 .fas {
-  color: $color-blue !important;
+  color: $color-blueSecondary !important;
   font-size: 2rem;
 }
 .icon {
-  color: $color-blue !important;
+  color: $color-blueSecondary !important;
 }
 
 label {
@@ -255,9 +255,18 @@ progress {
   display: block;
   width: 0;
   height: 2px;
-  background: $color-blue;
+  background: $color-blueSecondary;
   transition: width 0.4s;
 }
 .coulisse:hover::after {
   width: 100%;
+}
+.copyright {
+  background-color: $color-black;
+  font-weight: bold;
+  padding: 1rem;
+  text-align: center;
+  &__text {
+    color: $color-white;
+  }
 }

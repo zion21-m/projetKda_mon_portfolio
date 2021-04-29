@@ -7,7 +7,7 @@
 .btn {
   padding: 1rem;
   border-radius: 8px;
-  border: 1px solid #61dafb;
+  border: 1px solid #54bdda;
   transition: all 0.3s;
 }
 .btn:link, .btn:visited {
@@ -17,10 +17,10 @@
 }
 .btn:hover {
   background-color: #fff;
-  color: #61dafb;
+  color: #54bdda;
 }
 .btn--blue {
-  background-color: #61dafb;
+  background-color: #54bdda;
   color: #fff;
   font-size: 20px;
 }
@@ -241,7 +241,7 @@ h2 {
   background-color: #adb5bd;
 }
 .contactMe--blue {
-  color: #61dafb;
+  color: #54bdda;
 }
 
 input,
@@ -250,7 +250,7 @@ textarea {
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 5px;
-  border: 2px solid #61dafb;
+  border: 2px solid #54bdda;
 }
 
 input:focus,
@@ -263,12 +263,12 @@ textarea {
 }
 
 .fas {
-  color: #61dafb !important;
+  color: #54bdda !important;
   font-size: 2rem;
 }
 
 .icon {
-  color: #61dafb !important;
+  color: #54bdda !important;
 }
 
 label {
@@ -334,12 +334,22 @@ progress {
   display: block;
   width: 0;
   height: 2px;
-  background: #61dafb;
+  background: #54bdda;
   transition: width 0.4s;
 }
 
 .coulisse:hover::after {
   width: 100%;
+}
+
+.copyright {
+  background-color: #000;
+  font-weight: bold;
+  padding: 1rem;
+  text-align: center;
+}
+.copyright__text {
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
