@@ -7,26 +7,26 @@
 .btn {
   padding: 1rem;
   border-radius: 8px;
-  border: 1px solid #2f80ed;
+  border: 1px solid #61dafb;
   transition: all 0.3s;
 }
 .btn:link, .btn:visited {
   text-decoration: none;
-  border: 2px solid #2f80ed;
+  border: 2px solid #61dafb;
   color: indigo;
 }
 .btn:hover {
   background-color: #fff;
-  color: #2f80ed;
+  color: #61dafb;
 }
 .btn--blue {
-  background-color: #2f80ed;
-  color: white;
+  background-color: #61dafb;
+  color: #fff;
   font-size: 20px;
 }
 .btn--red {
   background-color: #d92950;
-  color: white;
+  color: #fff;
 }
 
 @font-face {
@@ -77,7 +77,7 @@ header {
   z-index: 100;
 }
 
-.menu--blue {
+.menu--brown {
   background-color: #212529 !important;
 }
 
@@ -88,12 +88,14 @@ header {
 .mobile__menu {
   background-color: #6c757d !important;
   width: 30vw;
-  color: white !important;
 }
 
 .mobile__menu > a {
   font-weight: bold !important;
-  color: white !important;
+}
+
+.logo--blue {
+  color: #61dafb !important;
 }
 
 h2 {
@@ -102,7 +104,8 @@ h2 {
 }
 
 .activ {
-  border-bottom: 2px solid white !important;
+  border-bottom: 2px solid #61dafb !important;
+  color: #61dafb !important;
 }
 
 .espace {
@@ -114,12 +117,34 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #fff;
   height: 100vh;
+}
+.homes__name--blue {
+  color: #61dafb;
+}
+.homes__btnContainer--position {
+  text-align: center;
+  margin-top: 10vh;
+}
+.homes__btnContainer--position a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #61dafb;
+  font-size: 1.5rem;
+  padding: 0.8rem 1.3rem;
+  border-radius: 8px;
+}
+.homes__btnContainer--position a:hover {
+  color: #61dafb;
+  background-color: #fff;
+}
+
+.profession {
+  width: 100vw;
 }
 
 .parallax {
-  /* The image used */
   background-image: linear-gradient(to left, rgba(4, 4, 4, 0.8) 20%, rgba(4, 4, 4, 0.5) 50%, rgba(4, 4, 4, 0.8) 100%), url("../img/bcg_portfolio.jpg");
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -132,11 +157,11 @@ h2 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 6rem;
   text-align: center;
-  color: white;
+  color: #fff;
 }
 
 .profession {
-  color: white;
+  color: #fff;
   font-size: 3rem;
   text-align: center;
   font-weight: bold;
@@ -215,43 +240,35 @@ h2 {
 .contactMe--gray {
   background-color: #adb5bd;
 }
+.contactMe--blue {
+  color: #61dafb;
+}
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 5px;
-  border: 2px solid #2f80ed;
+  border: 2px solid #61dafb;
 }
 
-input:focus, textarea:focus {
-  outline: #2f80ed;
+input:focus,
+textarea:focus {
+  outline: #61dafb;
 }
 
 textarea {
   resize: none;
 }
 
-.coulisse {
-  display: inline-block;
-}
-
-.coulisse::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 2px;
-  background: #2f80ed;
-  transition: width 0.4s;
-}
-
-.coulisse:hover::after {
-  width: 100%;
-}
-
 .fas {
-  color: #2f80ed;
+  color: #61dafb !important;
   font-size: 2rem;
+}
+
+.icon {
+  color: #61dafb !important;
 }
 
 label {
@@ -281,7 +298,8 @@ progress {
   background-color: #ced4da;
 }
 
-.mid--underlign, .start-underlign {
+.mid--underlign,
+.start-underlign {
   display: inline-block;
   position: relative;
 }
@@ -305,6 +323,23 @@ progress {
   position: absolute;
   bottom: -0.4em;
   left: 0;
+}
+
+.coulisse {
+  display: inline-block;
+}
+
+.coulisse::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #61dafb;
+  transition: width 0.4s;
+}
+
+.coulisse:hover::after {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

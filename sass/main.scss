@@ -1,225 +1,263 @@
-@import './base/reset.scss';
-@import './abstract/variables.scss';
-@import './abstract/mixin.scss';
-@import './components/button.scss';
-@import './base/typography.scss';
-
+@import "./base/reset.scss";
+@import "./abstract/variables.scss";
+@import "./abstract/mixin.scss";
+@import "./components/button.scss";
+@import "./base/typography.scss";
 
 section {
-    @include padding();
+  @include padding();
 }
 header {
-    display: block;
-    position: fixed;
-    width: 100vw;
-    z-index: 100;
-    // opacity: 0.8;
+  display: block;
+  position: fixed;
+  width: 100vw;
+  z-index: 100;
 }
-.menu--blue{
-    background-color: #212529 !important;
+
+.menu--brown {
+  background-color: $color-brown !important;
 }
 .menu--color {
-    background-color: #212529 !important;
+  background-color: $color-brown !important;
 }
 .mobile__menu {
-    background-color: #6c757d !important;
-    width: 30vw;
-    color: white !important;
+  background-color: #6c757d !important;
+  width: 30vw;
 }
 .mobile__menu > a {
-    font-weight: bold !important;
-    color: white !important;
+  font-weight: bold !important;
 }
+.logo--blue {
+  color: $color-blue !important;
+}
+
 h2 {
-    @include margin();
+  @include margin();
 }
 .activ {
-    border-bottom: 2px solid white!important;
+  border-bottom: 2px solid $color-blue !important;
+  color: $color-blue !important;
 }
 .espace {
-    background-color: rgb(0,0,0);
-    height: 11vh;
+  background-color: rgb(0, 0, 0);
+  height: 11vh;
 }
 
 .homes {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-white;
+  height: 100vh;
+  &__name--blue {
+    color: $color-blue;
+  }
+  &__btnContainer--position {
+    text-align: center;
+    margin-top: 10vh;
+  }
+  &__btnContainer--position a {
+    text-decoration: none;
+    color: $color-white;
+    background-color: $color-blue;
+    font-size: 1.5rem;
+    padding: 0.8rem 1.3rem;
+    border-radius: 8px;
+  }
+  &__btnContainer--position a:hover {
+    color: $color-blue;
+    background-color: $color-white;
+  }
+}
+.profession {
+  width: 100vw;
 }
 .parallax {
-        /* The image used */
-        background-image: linear-gradient(to left, rgba(4,4,4,0.8) 20%, rgba(4,4,4,0.5) 50%, rgba(4,4,4,0.8) 100%),
-         url('../img/bcg_portfolio.jpg');
-      
-        /* Create the parallax scrolling effect */
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+  background-image: linear-gradient(
+      to left,
+      rgba(4, 4, 4, 0.8) 20%,
+      rgba(4, 4, 4, 0.5) 50%,
+      rgba(4, 4, 4, 0.8) 100%
+    ),
+    url("../img/bcg_portfolio.jpg");
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .presentation {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 6rem;
-    text-align: center;
-    color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 6rem;
+  text-align: center;
+  color: $color-white;
 }
 
 .profession {
-    color: white;
-    font-size: 3rem;
-    text-align: center;
-    font-weight: bold;
+  color: $color-white;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bold;
 }
-@media (max-width:700px) {
-    .presentation {
-        font-size: 4rem;
-    }
-    .profession {
-        font-size: 2rem;
-    }
+@media (max-width: 700px) {
+  .presentation {
+    font-size: 4rem;
+  }
+  .profession {
+    font-size: 2rem;
+  }
 }
 
 .aboutMe {
-    background-color: #495057;
+  background-color: #495057;
 
-    &__picture {
-        width: 40%;
-    }
-    &__picture img {
-        width: 160px;
-        height: 160px;
-        object-fit: cover;
-        border: 2px solid #adb5bd;
-    }
+  &__picture {
+    width: 40%;
+  }
+  &__picture img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border: 2px solid #adb5bd;
+  }
 
-    &__identification {
-        display: flex;
-        justify-content: space-evenly;
-        padding-top: 1rem;
-        @include flex-responsive();
-    }
-    &__skills {
-        width: 80%;
-        padding-top: 0.7rem;
-    }
-    &--bcg {
-        background-color: #e9ecef;
-    }
-    &--alignText {
-        text-align: justify;
-    }
-    &__skills--presentation {
-        margin-top: 0.6rem;
-    }
+  &__identification {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 1rem;
+    @include flex-responsive();
+  }
+  &__skills {
+    width: 80%;
+    padding-top: 0.7rem;
+  }
+  &--bcg {
+    background-color: #e9ecef;
+  }
+  &--alignText {
+    text-align: justify;
+  }
+  &__skills--presentation {
+    margin-top: 0.6rem;
+  }
 }
 .projets {
-    background-color: #6c757d;
+  background-color: #6c757d;
 }
 .projets {
-    & .card .image {
-        overflow: hidden;
-        transition: all .5s;
-    }
+  & .card .image {
+    overflow: hidden;
+    transition: all 0.5s;
+  }
+  & .image img {
+    transition: all 0.8s;
+  }
+  & .card:hover {
     & .image img {
-        transition: all .8s;
+      transform: scale(1.5);
     }
-    & .card:hover {
-        & .image img {
-            transform: scale(1.5);
-        }
-    }
+  }
 }
 
-.contactMe{
-    & div {
-        padding: 0.5rem;
-    }
-    
-    &--gray {
-        background-color: #adb5bd;
-    }
+.contactMe {
+  & div {
+    padding: 0.5rem;
+  }
+
+  &--gray {
+    background-color: #adb5bd;
+  }
+  &--blue {
+    color: $color-blue;
+  }
 }
 
-input, textarea {
-    width: 100%;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 5px;
-    border: 2px solid $color-blue;
+input,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 2px solid $color-blue;
 }
-input:focus, textarea:focus {
-    outline: $color-blue;
+input:focus,
+textarea:focus {
+  outline: $color-blue;
 }
 textarea {
-    resize: none;
-}
-.coulisse {
-    display: inline-block;
-}
-
-.coulisse::after {
-    content:'';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: $color-blue;
-    transition: width .4s;
-}
-.coulisse:hover::after {
-    width: 100%;
+  resize: none;
 }
 
 .fas {
-    color: $color-blue;
-    font-size: 2rem;
+  color: $color-blue !important;
+  font-size: 2rem;
+}
+.icon {
+  color: $color-blue !important;
 }
 
 label {
-    display: block;
-    font-weight: bold;
-    margin-top: 1rem;
+  display: block;
+  font-weight: bold;
+  margin-top: 1rem;
 }
 progress {
-    width: 100%;
-    height: 1vh;
+  width: 100%;
+  height: 1vh;
 }
-.progress__bar--settings{
-    background-color: #ced4da ;
+.progress__bar--settings {
+  background-color: #ced4da;
 }
 .progress__bar--settings::-webkit-progress-bar {
-    background-color : #ced4da ;
+  background-color: #ced4da;
 }
 .progress__bar--settings::-webkit-progress-value {
-    background-color : #495057;
+  background-color: #495057;
 }
-.progress__bar--settings::-moz-progress-bar{
-    background-color: #ced4da;
+.progress__bar--settings::-moz-progress-bar {
+  background-color: #ced4da;
 }
 
-.mid--underlign, .start-underlign {
-    display: inline-block;
-    position: relative;
+.mid--underlign,
+.start-underlign {
+  display: inline-block;
+  position: relative;
 }
-    
+
 .mid--underlign:after {
-    content: "";
-    height: 3px;
-    width: 50%;
-    background-color: #212529;
-    position: absolute;
-    bottom: -.4em;
-    left: 50%;
-    transform: translate(-50%);
+  content: "";
+  height: 3px;
+  width: 50%;
+  background-color: #212529;
+  position: absolute;
+  bottom: -0.4em;
+  left: 50%;
+  transform: translate(-50%);
 }
 .start-underlign:after {
-    content: "";
-    height: 3px;
-    width: 50%;
-    background-color: #495057;
-    position: absolute;
-    bottom: -.4em;
-    left: 0;
+  content: "";
+  height: 3px;
+  width: 50%;
+  background-color: #495057;
+  position: absolute;
+  bottom: -0.4em;
+  left: 0;
+}
+.coulisse {
+  display: inline-block;
+}
+
+.coulisse::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: $color-blue;
+  transition: width 0.4s;
+}
+.coulisse:hover::after {
+  width: 100%;
 }
