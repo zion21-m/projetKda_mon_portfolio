@@ -27,9 +27,14 @@
           "pourcentageCompétence":50
       },
       {
-        "id":3,
+        "id":4,
         "nomCompetence":"Python",
         "pourcentageCompétence":50
+    },
+    {
+        "id":5,
+        "nomCompetence":"React",
+        "pourcentageCompétence":40
     }
     
     ],

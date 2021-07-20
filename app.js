@@ -33,6 +33,7 @@ fetch(
     return response.json();
   })
   .then(function (professions) {
+    console.log(professions);
     for (let profession of professions) {
       myProfessions.push(profession.name);
     }
