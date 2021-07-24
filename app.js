@@ -33,7 +33,6 @@ fetch(
     return response.json();
   })
   .then(function (professions) {
-    console.log(professions);
     for (let profession of professions) {
       myProfessions.push(profession.name);
     }
@@ -95,9 +94,7 @@ window.onload = function () {
     .then(function (response) {
       return response.json();
     })
-    // fetch("http://localhost:3000/identite").then(function(response){
-    //     return response.json();
-    // })
+
     .then(function (identites) {
       for (let identite of identites) {
         let name = document.createTextNode(
