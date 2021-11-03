@@ -70,11 +70,11 @@
             "descriptionProjet":"Réaliser le site internet de la Kinshasa Digital pour leur permettre de rester en contact avec leurs clients afin d'optimiser leurs services.",
             "href": "https://merdie-projet-fin-prarie.netlify.app"
             },
-        { "src": "./img/projet_kd-formulaire.png",
-            "alt":"le projet du formulaire",
-            "titreProjet": "Formulaire de contact",
-            "descriptionProjet": "Réaliser un formulaire sur la base d'une maquette présentée par le client.",
-            "href": "https://zion21-m.github.io/Projet_4_formulaire/"
+        { "src": "./img/homepage_movieProject.png",
+            "alt":"page d'accueil nuru-films",
+            "titreProjet": "Clone Allô ciné",
+            "descriptionProjet": "Réaliser le clône d'allo ciné en récupérant les informations provenant de l'api de theMovieDatabase",
+            "href": "https://nuru-films.netlify.app/"
             }
       ],
 
