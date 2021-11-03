@@ -59,10 +59,10 @@
             "href": "https://zion21-m.github.io/Projet_4_formulaire/"
             },
         {"src":"./img/projet_kd-formulaire-avec-js.png",
-            "alt":"le projet de la liste des contacts avec js", 
-           "titreProjet": "Formulaire avec Js",
-           "descriptionProjet": "Le travail consiste à réaliser un formulaire qui ajoute dynamiquement les utilisateurs à l'aide de JavaScript.",
-           "href": "https://zion21-m.github.io/projet_kda_formulaire_avec_javascript/"
+            "alt":"le portfolio de Merdie Mulaba", 
+           "titreProjet": "Porfolio Merdie Mulaba",
+           "descriptionProjet": "Le travail consiste à réaliser un portfolio présentant mes réalisations et présentant également ma personne.",
+           "href": "https://zion21-m.github.io/projetKda_mon_portfolio/"
            },
         { "src": "./img/projet_site-kd.png",
             "alt":"le projet du site de la kinshasa digital",
